@@ -771,8 +771,8 @@ static void battery_level_meas_timeout_handler(void *p_context) {
     // check low battery level, if level == 0, we can try to shutdown.
     if (percentage_batt_lvl == 0) {
         NRF_LOG_INFO("battery too low, try to shutdown...");
-        g_is_low_battery_shutdown = true;
-        sleep_timer_start(SLEEP_NO_BATTERY_SHUTDOWN);
+        // g_is_low_battery_shutdown = true;
+        // sleep_timer_start(SLEEP_NO_BATTERY_SHUTDOWN);
     } else {
         g_is_low_battery_shutdown = false;
     }
